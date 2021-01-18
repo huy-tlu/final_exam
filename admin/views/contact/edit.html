@@ -1,0 +1,40 @@
+<!-- BEGIN: EDT -->
+<form method="POST" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>Home</td>
+            <td>    
+                <input type="text" name='txtHome' value='{EDT.home}'>
+                <span id='mesError' style="color:red">{messFirst}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td>    
+                <input type="number" name='txtMobi' value='{EDT.mobile}'>
+                <span id='mesError' style="color:red">{messLast}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Gmail</td>
+            <td>
+                <input type="text" value='{EDT.gmail}' name='txtGmail'>
+                <span id='mesError' style="color:red">{messClass}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>
+                <input type="text" value='{EDT.city}' name='txtCity'>
+                <span id='mesError' style="color:red">{messAddress}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>Save</button>
+                <td><input type="reset" value='Reset'></td>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- END: EDT -->

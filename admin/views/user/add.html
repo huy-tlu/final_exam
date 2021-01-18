@@ -1,0 +1,54 @@
+<!-- BEGIN: ADD -->
+        <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>             
+            <script type="text/javascript" src="{baseUrl}/btth_4/admin/js/users/add.js"></script>
+          </head>
+          <body>
+                <table>
+                    <tr>
+                        <td>User Name</td>
+                        <td>
+                            <input type="text" name='txtUser'  value='{ADD.user_name}'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <input type="text" name='txtEmail'  value='{ADD.email}'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>User Level</td>
+                        <td>
+                            <input type="number" name='txtLevel'  value='{ADD.user_level}'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            <input type="text" name='txtStatus'  value='{ADD.status}'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <input type="password" name='txtPwd'  value='{ADD.password}'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" id="submit" value="submit">
+                            <td><input type="reset" value='Reset'></td>
+                        </td>
+                    </tr>
+                </table>
+          </body>
+          </html>  
+<!-- END: ADD -->

@@ -1,0 +1,46 @@
+<!-- BEGIN: EDT -->
+<form method="POST" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td>    
+                <input type="text" name='txtFirst' value='{EDT.first_name}'>
+                <span id='mesError' style="color:red">{messFirst}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>    
+                <input type="text" name='txtLast' value='{EDT.last_name}'>
+                <span id='mesError' style="color:red">{messLast}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td>
+                <input type="datetime-local" value='{EDT.dob}' name='txtDob'>
+                <span id='mesError' style="color:red">{messClass}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="text" value='{EDT.gender}' name='txtGender'>
+                <span id='mesError' style="color:red">{messAddress}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Avatar</td>
+            <td>
+                <input type="file" value='{EDT.avatar}' name='txtAvatar'>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>Save</button>
+                <td><input type="reset" value='Reset'></td>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- END: EDT -->

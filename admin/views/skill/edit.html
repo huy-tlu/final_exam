@@ -1,0 +1,26 @@
+<!-- BEGIN: EDT -->
+<form method="POST" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>Skill 1</td>
+            <td>    
+                <input type="text" name='txtSkill1' value='{EDT.skill_1}'>
+                <span id='mesError' style="color:red">{messFirst}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Skill 2</td>
+            <td>    
+                <input type="text" name='txtSkill2' value='{EDT.skill_2}'>
+                <span id='mesError' style="color:red">{messLast}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>Save</button>
+                <td><input type="reset" value='Reset'></td>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- END: EDT -->

@@ -1,0 +1,30 @@
+<!-- BEGIN:LISTING -->
+<br>
+<!-- <span class="navbar-brand float-right btn btn-facebook mb-2">Welcome {LS.user_name}</span> -->
+
+<table border=1 style="width: 100%;" id="tblListing">
+    <tr class="text-center">
+        <th>ID</th>
+        <th>User ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Avatar</th>
+        <th>Gender</th>
+        <th colspan=2>Action</th>
+    </tr>
+    <!-- BEGIN:LS -->
+    <tr>
+        <td>{LS.id}</td>
+        <td>{LS.user_id}</td>
+        <td>{LS.first_name}</td>
+        <td>{LS.last_name}</td>
+        <td>{LS.dob}</td>
+        <td>{LS.avatar}</td>
+        <td>{LS.gender}</td>
+        <td><a href="?m=profile&a=edit&id={LS.id}">Edit</a></td>
+        <td><a href="javascript:void(0)" onclick='onDelete("profile","delete","{LS.id}")'>Delete</a></td>
+    </tr>
+    <!-- END:LS -->
+</table>
+<!-- END:LISTING -->

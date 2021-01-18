@@ -1,0 +1,72 @@
+<!-- BEGIN: SIGNUP -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="{baseUrl}/admin/js/signup_1.js"></script>
+
+    <link rel="stylesheet" href="{baseUrl}/admin/css/signup.css" type="text/css">
+</head>
+
+<body>
+
+    <form method="POST" enctype='multipart/form-data' id='frmSign'>
+        <!-- <label>
+            <p class="label-txt">ENTER YOUR EMAIL</p>
+            <input type="text" class="input" name=''>
+            <span style='color:red' id="mesEmail"></span>
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label> -->
+        <label>
+            <p class="label-txt">ENTER YOUR USER NAME</p>
+            <input type="text" class="input" name='txtUsersName'>
+            <span style='color:red' id="mesUser">{errExisted}</span>
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+        <label>
+            <p class="label-txt">ENTER YOUR PASSWORD</p>
+            <input type="password" class="input" name='pwd'>
+            <span style='color:red' id="mesPass"></span>
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+        <button type="submit" name='btnSign' id='btnSignin'>submit</button><br><br>
+        <hr><br>
+        <span>You have an account? Click here to <a href="{baseUrl}/admin/login.php">Login</a></span>
+    </form>
+</body>
+
+</html>
+<!-- <script>
+        var s = document.frmSign;
+        var btn = s.btnSign;
+        var flag = 'YES';
+        btn.addEventListener('click',function(){
+            let s1 = s.txtUsersName.value;
+            let s2 = s.pwd.value;
+            if(s1=='') flag='NO';
+            if(s2=='') flag='NO';
+            if(flag=='YES') s.submit();
+        });
+    </script> -->
+<!-- END: SIGNUP -->

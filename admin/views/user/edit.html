@@ -1,0 +1,42 @@
+<!-- BEGIN: EDT -->
+    <form method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>User</td>
+                <td>
+                    <input type="text" name='txtUser' value="{EDT.user_name}">
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="text" name='txtEmail'  value='{EDT.email}'>
+                </td>
+            </tr>
+            <tr>
+                <td>User Level</td>
+                <td>
+                    <input type="number" name='txtLevel'  value='{EDT.user_level}'>
+                </td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>
+                    <input type="text" name='txtStatus'  value='{EDT.status}'>
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name='txtPwd' value="{EDT.password}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button>Save</button>
+                    <td><input type="reset" value='Reset'></td>
+                </td>
+            </tr>
+        </table>
+    </form>
+<!-- END: EDT -->
