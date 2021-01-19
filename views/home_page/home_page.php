@@ -1,3 +1,9 @@
+<?php 
+    include("../config.php"); 
+    // $_SESSION['views'] = '';
+    $sql = "SELECT * from tblusers";
+    $result = mysqli_query($conn, $sql);   
+?>
 <!DOCTYPE html>
 <html>
 
@@ -23,31 +29,33 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm bg hehe">
-
+    <nav class="navbar navbar-expand-sm bg hehe">
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="navbar-brand" href="header.html">E-Resume</a>
+        <a class="navbar-brand" href="home_page.php">E-Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../simple_resume/simple_home.html">Simple Resume</a>
+        <a class="nav-link" href="../simple_resume/simple_home.php">Simple Resume</a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Modern Resume</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Professional Resume</a>
-      </li>&emsp;&emsp;&emsp;&emsp;
+      </li> -->
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
       <li class="nav-item user">
-        <a class="nav-link" href="#"><i class="fas fa-user">&emsp;LogIn</i></a>
+        <a class="nav-link" href="../login/login.php"><i class="fas fa-user">&emsp;LogIn</i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-user-plus">&emsp;SignUp</i></a>
+        <a class="nav-link" href="../login/signup.php"><i class="fas fa-user-plus">&emsp;SignUp</i></a>
       </li>
     </ul>
   </nav>
+  
   <div style="height: 55px; width: 100%; background-color: #0062E6;"></div>
+
   <div class="containers">
     <div class="jumbotron">
       <h1 class="text-white">
@@ -61,7 +69,7 @@
   </div><br>
   <!-- <div class="container">    
   </div> -->
-  <!-- <div class="home__features-container">
+  <div class="home__features-container">
     <h2 class="home__features-title">Features designed to help you win your dream job</h2>
     <div class="home__features-list">
       <div class="home__features-item">
@@ -76,7 +84,9 @@
         </div>
       </div>
       <div class="home__features-item">
-        <div class="home__features-image home__features-image--writing is-image-loaded" style="background-image: url('../image/easy.png'); background-size: 55.995px 55.995px;">
+        <div class="home__features-image home__features-image--writing is-image-loaded"
+          data-lazy-bg="https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg"
+          style="background-image: url(&quot;https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg&quot;);">
         </div>
         <div class="home__features-item-content">
           <div class="home__features-label">Automatic spell-checker</div>
@@ -85,7 +95,9 @@
         </div>
       </div>
       <div class="home__features-item">
-        <div class="home__features-image home__features-image--ok-hand is-image-loaded">
+        <div class="home__features-image home__features-image--ok-hand is-image-loaded"
+          data-lazy-bg="https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg"
+          style="background-image: url(&quot;https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg&quot;);">
         </div>
         <div class="home__features-item-content">
           <div class="home__features-label">Your data is safe</div>
@@ -93,7 +105,9 @@
         </div>
       </div>
       <div class="home__features-item">
-        <div class="home__features-image home__features-image--grammar is-image-loaded">
+        <div class="home__features-image home__features-image--grammar is-image-loaded"
+          data-lazy-bg="https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg"
+          style="background-image: url(&quot;https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg&quot;);">
         </div>
         <div class="home__features-item-content">
           <div class="home__features-label">Automatic summary generator</div>
@@ -102,7 +116,9 @@
         </div>
       </div>
       <div class="home__features-item">
-        <div class="home__features-image home__features-image--templates is-image-loaded">
+        <div class="home__features-image home__features-image--templates is-image-loaded"
+          data-lazy-bg="https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg"
+          style="background-image: url(&quot;https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg&quot;);">
         </div>
         <div class="home__features-item-content">
           <div class="home__features-label">Approved templates</div>
@@ -111,7 +127,9 @@
         </div>
       </div>
       <div class="home__features-item">
-        <div class="home__features-image home__features-image--job-tracking is-image-loaded">
+        <div class="home__features-image home__features-image--job-tracking is-image-loaded"
+          data-lazy-bg="https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg"
+          style="background-image: url(&quot;https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg&quot;);">
         </div>
         <div class="home__features-item-content">
           <div class="home__features-label">Job tracking</div>
@@ -120,7 +138,9 @@
         </div>
       </div>
       <div class="home__features-item">
-        <div class="home__features-image home__features-image--security is-image-loaded">
+        <div class="home__features-image home__features-image--security is-image-loaded"
+          data-lazy-bg="https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg"
+          style="background-image: url(&quot;https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg&quot;);">
         </div>
         <div class="home__features-item-content">
           <div class="home__features-label">Tips from recruiters</div>
@@ -129,7 +149,9 @@
         </div>
       </div>
       <div class="home__features-item">
-        <div class="home__features-image home__features-image--word is-image-loaded">
+        <div class="home__features-image home__features-image--word is-image-loaded"
+          data-lazy-bg="https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg"
+          style="background-image: url(&quot;https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg&quot;);">
         </div>
         <div class="home__features-item-content">
           <div class="home__features-label">Multi-format resume options</div>
@@ -138,7 +160,9 @@
         </div>
       </div>
       <div class="home__features-item">
-        <div class="home__features-image home__features-image--cover-letter is-image-loaded">
+        <div class="home__features-image home__features-image--cover-letter is-image-loaded"
+          data-lazy-bg="https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg"
+          style="background-image: url(&quot;https://resume.io/assets/landing/home/features/features_sprite-3765f50fec26dd9e9db94ca03dad05d1fd3cf2fbc34c4619d5d3c7ecd56a4fc1.svg&quot;);">
         </div>
         <div class="home__features-item-content">
           <div class="home__features-label">Cover letters</div>
@@ -147,7 +171,5 @@
         </div>
       </div>
     </div>
-  </div> -->
-</body>
-
-</html>
+  </div>
+<?php require("footer.php"); ?>

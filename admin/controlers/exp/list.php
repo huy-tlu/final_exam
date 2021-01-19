@@ -1,6 +1,6 @@
 <?php
-	$xtp = new XTemplate("views/customer/list.html");
-	$sql = "SELECT user_id, user_name, avatar, first_name, last_name, email, class, address1, city, phone FROM tblusers";
+	$xtp = new XTemplate("views/exp/list.html");
+	$sql = "SELECT user_id, id, exp_1, exp_2 FROM tblexps";
 	$rs = $db->fetchAll($sql);
 	$nbr=1;
 	foreach($rs as $row){
