@@ -1,4 +1,7 @@
 <?php
+  if(isset($_GET['id'])){
+    $id = $_GET['id'];
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,12 +23,12 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="../css/header.css" type='text/css'>
+    <link rel="stylesheet" href="../../css/simple_resume/simple_resume_1.css" type='text/css'>
+  <link rel="stylesheet" href="../../css/header.css" type='text/css'>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg hehe">
-    <!-- Links -->
+   
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="navbar-brand" href="../home_page/home_page.php">E-Resume</a>
@@ -65,15 +68,15 @@
 
     <div class='container'>
         <div class='row'>            
-            <div class='col-sm-4 border border-dark'>
-                <a href="http://localhost:86/final_exam/views/simple_resume/simple_resume_1.php"><img src='../image/simple_1.png' alt="simple resume" width=100% height=100% /></a>
+            <div class='col-sm-4 '>
+                <a href="http://localhost:86/final_exam/views/simple_resume/simple_resume_1.php??id=<?php echo $id ?>"><img src='../image/simple_1.png' alt="simple resume" width=100% height=100% /></a>
             </div>               
-            <div class='col-sm-4 border border-dark'>
+            <!-- <div class='col-sm-4 border border-dark'>
                 <img src='../image/simple_1.png' alt="simple resume" width=100% height=100% />
             </div>               
             <div class='col-sm-4 border border-dark'>
                 <img src='../image/simple_1.png' alt="simple resume" width=100% height=100% />
-            </div>    
+            </div>     -->
         </div>    
     </div>
     <br><br><br>
